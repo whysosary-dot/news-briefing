@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Global Shipping Daily Briefing</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #e8ecf1; color: #1a1a2e; min-height: 100vh; display: flex; justify-content: center; padding: 40px 20px; }
+  .container { background: #fff; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); max-width: 800px; width: 100%; padding: 40px 48px 36px; }
+  .header { text-align: center; padding-bottom: 24px; border-bottom: 3px solid #0f172a; margin-bottom: 28px; }
+  .header h1 { font-size: 28px; font-weight: 800; color: #0f172a; letter-spacing: -0.5px; }
+  .header p { font-size: 13px; color: #7a8a9e; margin-top: 8px; }
+  .sector-tabs { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
+  .sector-tab { padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; cursor: pointer; border: 1.5px solid #e2e8f0; background: #f6f8fa; color: #64748b; transition: all 0.2s; }
+  .sector-tab.active, .sector-tab:hover { background: #0f172a; color: #fff; border-color: #0f172a; }
+  .sector-tab[data-sector="shipping"].active { background: #1e40af; border-color: #1e40af; }
+  .list { }
+  .item { display: flex; align-items: center; justify-content: space-between; background: #f6f8fa; border: 1px solid #e2e8f0; border-radius: 10px; padding: 16px 20px; margin-bottom: 10px; text-decoration: none; color: inherit; transition: background 0.2s, box-shadow 0.2s; }
+  .item:hover { background: #eef2f7; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+  .item.new { border-left: 3px solid #1e40af; }
+  .item-date { font-size: 15px; font-weight: 700; color: #1a1a2e; }
+  .item-sub { font-size: 11px; color: #7a8a9e; margin-top: 3px; max-width: 580px; }
+  .badge-new { background: #1e40af; color: #fff; font-size: 10px; font-weight: 800; padding: 2px 8px; border-radius: 4px; white-space: nowrap; }
+  .badge-link { color: #1e40af; font-size: 12px; font-weight: 600; white-space: nowrap; }
+  .sector-icon { font-size: 13px; margin-right: 6px; }
+  .footer { text-align: center; margin-top: 28px; font-size: 11px; color: #94a3b8; }
+  @media (max-width: 600px) { .container { padding: 24px 16px; } .item { flex-direction: column; align-items: flex-start; gap: 8px; } .item-sub { max-width: 100%; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>Global Shipping Daily Briefing</h1>
+    <p>매일 오전 5시 — 글로벌 해운·해양 섹터 데일리 뉴스 브리핑</p>
+  </div>
+  <div class="sector-tabs">
+    <div class="sector-tab active" data-sector="shipping">해운</div>
+    <div class="sector-tab" data-sector="all" style="opacity:0.5;cursor:default;">+ 더 많은 섹터 (예정)</div>
+  </div>
+  <div class="list" id="briefing-list"></div>
+  <div class="footer">자동 생성 브리핑 — 투자 권유가 아닙니다 | Source: TradeWinds, Maritime Executive, Seatrade Maritime</div>
+</div>
+<script>
+const b=[{d:"2026-04-07",label:"2026년 4월 7일 (화)",sub:"호르무즈 해협 통항 재개 시작 — 중국 벌크선 선도 통과 / 트럼프, 이란 인프라 파괴 시한 언급 / HD현대 LPG선 수주 / 우크라이나 드론 러시아 벌크선 격침",n:true}];
+const list=document.getElementById('briefing-list');
+b.forEach(item=>{const a=document.createElement('a');a.className='item'+(item.n?' new':'');a.href='briefings/shipping-daily-'+item.d+'.html';a.innerHTML='<div><div class="item-date"><span class="sector-icon">🚢</span>'+item.label+'</div><div class="item-sub">'+item.sub+'</div></div><div style="display:flex;align-items:center;gap:10px;">'+(item.n?'<span class="badge-new">NEW</span>':'')+'<span class="badge-link">브리핑 보기 →</span></div>';list.appendChild(a);});
+</script>
+</body>
+</html>
