@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>해운 섹터 데일리 브리핑 | 2026.04.07</title>
+<style>
+@page{size:A4 portrait;margin:10mm 12mm}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
+:root{--navy:#0f172a;--navy2:#1e293b;--navy3:#334155;--red:#dc2626;--red-bg:#fef2f2;--red-light:#fee2e2;--blue:#1e40af;--blue-bg:#eff6ff;--blue-light:#dbeafe;--green:#16a34a;--green-bg:#f0fdf4;--green-light:#dcfce7;--amber:#d97706;--amber-bg:#fffbeb;--amber-light:#fef3c7;--slate:#334155;--slate2:#64748b;--slate3:#94a3b8;--slate4:#cbd5e1;--slate5:#e2e8f0;--slate6:#f1f5f9;--white:#fff;--ink:#0f172a}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+body{font-family:'Noto Sans KR',-apple-system,sans-serif;color:var(--ink);background:var(--white);font-size:9pt;line-height:1.55}
+.page{width:186mm;max-width:186mm;margin:0 auto}
+.page-break{page-break-before:always}
+.nb{page-break-inside:avoid;break-inside:avoid}
+@media screen{body{background:#dde3ea;padding:24px 0}.page{background:#fff;padding:10mm 12mm;box-shadow:0 4px 20px rgba(0,0,0,.12);border-radius:6px;margin-bottom:20px}}
+.hdr{background:linear-gradient(135deg,#0c1929,#172554 50%,#1e3a5f)!important;border-radius:8px;padding:14px 18px;margin-bottom:14px;display:flex;justify-content:space-between;align-items:center;color:#fff}
+.hdr h1{font-size:15pt;font-weight:900;letter-spacing:-.8px}
+.hdr .sub{font-size:7.5pt;color:#94a3b8;margin-top:2px}
+.hdr .dt{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);padding:5px 14px;border-radius:20px;font-size:8pt;font-weight:700}
+.hero{border-radius:8px;padding:14px 16px;margin-bottom:14px;display:flex;align-items:flex-start;gap:12px}
+.hero.alert{background:linear-gradient(135deg,#fef2f2,#fff1f2)!important;border:1.5px solid #fca5a5}
+.hero.positive{background:linear-gradient(135deg,#eff6ff,#dbeafe)!important;border:1.5px solid #93c5fd}
+.hero-icon{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.hero.alert .hero-icon{background:var(--red);color:#fff}
+.hero.positive .hero-icon{background:var(--blue);color:#fff}
+.hero-text{font-size:8.5pt;line-height:1.65}
+.hero.alert .hero-text{color:#991b1b}
+.hero.positive .hero-text{color:#1e3a5f}
+.hero-text b{font-weight:900}
+.sec{margin-bottom:14px}
+.sec-title{font-size:10.5pt;font-weight:900;color:var(--navy);padding-bottom:6px;border-bottom:2px solid var(--navy);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.sec-title .icon{font-size:14px}
+.news-grid{display:grid;grid-template-columns:1fr;gap:8px}
+.news-card{background:var(--slate6);border:1px solid var(--slate5);border-radius:8px;padding:12px 14px}
+.news-card.highlight{border-left:3px solid var(--red);background:var(--red-bg)}
+.news-card.info{border-left:3px solid var(--blue);background:var(--blue-bg)}
+.news-card.deal{border-left:3px solid var(--green);background:var(--green-bg)}
+.news-card.warning{border-left:3px solid var(--amber);background:var(--amber-bg)}
+.news-tag{font-size:6.5pt;font-weight:800;text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px}
+.news-card.highlight .news-tag{color:var(--red)}
+.news-card.info .news-tag{color:var(--blue)}
+.news-card.deal .news-tag{color:var(--green)}
+.news-card.warning .news-tag{color:var(--amber)}
+.news-title{font-size:9.5pt;font-weight:800;color:var(--navy);margin-bottom:4px}
+.news-body{font-size:8pt;color:var(--slate);line-height:1.6}
+.kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px}
+.kpi{text-align:center;padding:10px 6px;border-radius:8px;border:1px solid var(--slate5)}
+.kpi.up{background:var(--red-bg);border-color:var(--red-light)}
+.kpi.dn{background:var(--blue-bg);border-color:var(--blue-light)}
+.kpi.neu{background:var(--slate6)}
+.kpi-lb{font-size:6.5pt;font-weight:700;color:var(--slate3);text-transform:uppercase;letter-spacing:.5px}
+.kpi-v{font-size:12pt;font-weight:900;margin-top:3px}
+.kpi.up .kpi-v{color:var(--red)}
+.kpi.dn .kpi-v{color:var(--blue)}
+.insight{background:linear-gradient(135deg,#f8fafc,#f1f5f9);border:1px solid var(--slate5);border-radius:8px;padding:14px 16px;margin-bottom:14px}
+.insight-title{font-size:9pt;font-weight:800;color:var(--navy);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.insight-body{font-size:8pt;color:var(--slate);line-height:1.7}
+.tbl{width:100%;border-collapse:collapse;font-size:7.5pt;margin-bottom:14px}
+.tbl th{background:var(--navy)!important;color:#fff;font-weight:700;padding:7px 10px;text-align:left;font-size:7pt;text-transform:uppercase;letter-spacing:.5px}
+.tbl td{padding:7px 10px;border-bottom:1px solid var(--slate5)}
+.tbl tr:nth-child(even) td{background:var(--slate6)!important}
+.back-btn{display:inline-block;margin-bottom:14px;padding:6px 14px;background:var(--slate6);border:1px solid var(--slate5);border-radius:6px;text-decoration:none;color:var(--slate);font-size:8pt;font-weight:600}
+.ftr{margin-top:16px;padding-top:12px;border-top:1px solid var(--slate5);font-size:7pt;color:var(--slate3);text-align:center;line-height:1.6}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:600px){.two-col{grid-template-columns:1fr}.kpi-row{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<div class="page">
+<a href="../index.html" class="back-btn">← 브리핑 목록</a>
+<div class="hdr"><div><h1>Global Shipping Daily Briefing</h1><div class="sub">해운·해양 섹터 데일리 뉴스 브리핑</div></div><div class="dt">2026.04.07 (화)</div></div>
+<div class="hero alert"><div class="hero-icon">⚠️</div><div class="hero-text"><b>호르무즈 해협 위기 지속 — 일부 통항 재개 시작.</b> 약 5주간 사실상 차단됐던 호르무즈 해협에 중국 벌크선이 선도적으로 통과를 재개했으나, LNG 운반선은 여전히 진입을 망설이는 상황. 트럼프 대통령은 이란 인프라 파괴 시한을 언급하며 긴장 고조. 미국 정부는 해상보험 보증을 $40B로 확대하고, 해양 지배력 구축에 $70B 투입 계획 발표.</div></div>
+<div class="kpi-row"><div class="kpi up"><div class="kpi-lb">BDI (발틱건화물)</div><div class="kpi-v">—</div></div><div class="kpi neu"><div class="kpi-lb">WTI</div><div class="kpi-v">$111</div></div><div class="kpi up"><div class="kpi-lb">VLCC 운임</div><div class="kpi-v">급등</div></div><div class="kpi neu"><div class="kpi-lb">Hormuz 통항</div><div class="kpi-v">일부 재개</div></div></div>
+<div class="sec"><div class="sec-title"><span class="icon">🔥</span> 호르무즈 해협 위기 — 핵심 동향</div><div class="news-grid">
+<div class="news-card highlight nb"><div class="news-tag">Breaking · Tankers</div><div class="news-title">트럼프, 이란 인프라 파괴 시한 언급</div><div class="news-body">트럼프 대통령이 이란 인프라에 대한 군사적 조치 시한에 대해 발언하며 지정학적 긴장이 한층 고조.</div></div>
+<div class="news-card highlight nb"><div class="news-tag">Breaking · Tankers</div><div class="news-title">트럼프, 이란에 해협 개방 촉구하는 강경 발언</div><div class="news-body">호르무즈 해협 개방을 이란에 직접적으로 압박하는 강경 발언을 이어가며, 해협 통항 정상화 시점에 대한 시장의 관심이 집중.</div></div>
+<div class="news-card info nb"><div class="news-tag">Bulkers · Hormuz</div><div class="news-title">중국 벌크선, 호르무즈 해협 통과 — 건화물선이 선도</div><div class="news-body">중국 소속 벌크선이 호르무즈 해협을 통과하며, 건화물선 부문이 해협 재통항을 선도하는 양상.</div></div>
+<div class="news-card info nb"><div class="news-tag">Bulkers · Hormuz</div><div class="news-title">Star Bulk 2번째 선박, 미국 상장사로서 드문 해협 통과</div><div class="news-body">미국 상장 해운사 Star Bulk의 두 번째 선박이 호르무즈 해협을 통과.</div></div>
+<div class="news-card warning nb"><div class="news-tag">Gas · Hormuz</div><div class="news-title">LNG 운반선들, 해협 출구 앞에서 회항</div><div class="news-body">호르무즈 해협 출구를 향해 항진 중이던 LNG 운반선들이 진입 직전 회항. 가스선 부문은 여전히 통항 재개에 신중.</div></div>
+<div class="news-card highlight nb"><div class="news-tag">Containers · Hormuz</div><div class="news-title">이란, 호르무즈 해협 내 선박 공격 주장</div><div class="news-body">이란이 호르무즈 해협 내에서 선박에 대한 공격을 실시했다고 주장.</div></div>
+</div></div>
+<div class="sec nb"><div class="sec-title"><span class="icon">🇺🇸</span> 미국 해양 정책</div><div class="news-grid">
+<div class="news-card info nb"><div class="news-tag">Regulation · Policy</div><div class="news-title">트럼프 행정부, 해양 지배력에 약 $70B 투입 계획</div><div class="news-body">미국 백악관이 해양 지배력 확보를 위해 약 700억 달러 규모의 투자 계획을 공개.</div></div>
+<div class="news-card info nb"><div class="news-tag">Insurance · Policy</div><div class="news-title">미국 정부, 호르무즈 통항 보험 보증 곧 개시 예정</div><div class="news-body">미국 정부 지원 호르무즈 해협 통항 보험 계획이 곧 시작될 예정. 보증 규모 $40B로 확대.</div></div>
+</div></div>
+</div>
+<div class="page page-break">
+<div class="sec"><div class="sec-title"><span class="icon">💥</span> 우크라이나-러시아 해상 분쟁</div><div class="two-col">
+<div class="news-card highlight nb"><div class="news-tag">Bulkers · Conflict</div><div class="news-title">우크라이나 드론, 아조프해에서 러시아 곡물 벌크선 격침</div><div class="news-body">우크라이나 드론이 곡물을 적재한 러시아 벌크선을 아조프해에서 격침.</div></div>
+<div class="news-card warning nb"><div class="news-tag">Tankers · Conflict</div><div class="news-title">우크라이나, 러시아 석유 항구 드론 공격으로 $1B 피해</div><div class="news-body">우크라이나의 러시아 석유 항구 대상 드론 공격으로 약 10억 달러 규모 피해 추산.</div></div>
+</div></div>
+<div class="sec"><div class="sec-title"><span class="icon">🏗️</span> 신조 발주 &amp; S&amp;P (매매)</div><div class="news-grid">
+<div class="news-card deal nb"><div class="news-tag">Gas · Newbuilding</div><div class="news-title">Byzantine Maritime, 6년 만에 LPG선 발주 — HD현대 수주</div><div class="news-body">그리스 선주 Byzantine Maritime이 6년 간의 LPG선 발주 공백을 깨고 HD현대에서 신조 발주.</div></div>
+<div class="news-card deal nb"><div class="news-tag">Tankers · Newbuilding</div><div class="news-title">그리스 Carlova Maritime, VLCC + 아프라막스 신조 발주</div><div class="news-body">그리스 선주 Carlova Maritime이 VLCC 및 아프라막스급 유조선 신조 발주.</div></div>
+</div>
+<table class="tbl nb" style="margin-top:10px"><tr><th>유형</th><th>선주</th><th>선종</th><th>조선소/비고</th></tr><tr><td>신조</td><td>Byzantine Maritime</td><td>LPG 운반선</td><td>HD현대 / 6년 만의 발주</td></tr><tr><td>신조</td><td>Carlova Maritime</td><td>VLCC+아프라막스</td><td>미공개</td></tr><tr><td>매매</td><td>DryDel Shipping</td><td>벌크선</td><td>자산 거래 체결</td></tr><tr><td>매매</td><td>Seacon 연계</td><td>벌크선 2척</td><td>견조한 가격에 매각</td></tr><tr><td>매각</td><td>두바이 원자재 트레이더</td><td>유조선</td><td>해운업 완전 철수</td></tr><tr><td>매각</td><td>Maersk Tankers</td><td>유조선</td><td>선박 매각으로 실적 방어</td></tr><tr><td>해체</td><td>세이셸 소재 선주</td><td>벌크선</td><td>해체 가격 상승 중 재활용</td></tr></table>
+</div>
+<div class="sec"><div class="sec-title"><span class="icon">👤</span> 기업 &amp; 인물</div><div class="news-grid">
+<div class="news-card nb"><div class="news-tag">People · Oil Major</div><div class="news-title">BP 해운 부문 수장, BP 부CEO로 승진</div><div class="news-body">BP의 해운 부문 책임자가 오일 메이저 부CEO 직위로 승진.</div></div>
+<div class="news-card nb"><div class="news-tag">Finance · Greece</div><div class="news-title">Gotsis 가문, 그리스 선주 지원 은행 지분 인수</div><div class="news-body">Gotsis 가문이 그리스 선주들이 후원하는 은행의 지분을 인수.</div></div>
+<div class="news-card warning nb"><div class="news-tag">People · Legal</div><div class="news-title">Hin Leong 창업자, 장기 징역형 복역 시작</div><div class="news-body">싱가포르 석유 무역 업체 Hin Leong 창업자 Lim Oon Kuin이 장기 징역형 복역 시작.</div></div>
+</div></div>
+</div>
+<div class="page page-break">
+<div class="sec"><div class="sec-title"><span class="icon">⚖️</span> 규제 &amp; 다크플릿</div><div class="news-grid">
+<div class="news-card warning nb"><div class="news-tag">Regulation · Dark Fleet</div><div class="news-title">스웨덴, 다크플릿 의심 선박 억류 후 석방</div><div class="news-body">스웨덴이 억류했던 다크플릿 의심 선박이 선적국 확인 후 석방.</div></div>
+<div class="news-card nb"><div class="news-tag">Law · Dark Fleet</div><div class="news-title">우크라이나 해운 인사, 다크플릿 연관 부인</div><div class="news-body">우크라이나 해운업계 인사 Victor Baransky가 다크플릿 선박과의 연관성을 부인.</div></div>
+<div class="news-card nb"><div class="news-tag">People · Legal</div><div class="news-title">그리스 선주, V.Ships와의 분쟁에서 14개월 징역형</div><div class="news-body">그리스 선주가 V.Ships와의 법적 분쟁에서 14개월 징역형을 선고 받음.</div></div>
+</div></div>
+<div class="insight nb"><div class="insight-title">💡 투자 시사점 (해운 섹터)</div><div class="insight-body"><b>1. 호르무즈 해협:</b> 건화물선 중심 통항 재개, LNG·컨테이너선은 신중. 미국 정부 $40B 보험 보증은 정상화 앞당길 수 있으나 이란 리스크 상존. VLCC 운임 급등세 지속 전망.<br><br><b>2. 신조 시장:</b> Byzantine Maritime HD현대 LPG선 발주, Carlova Maritime VLCC+아프라막스 발주는 한국 조선업에 우호적. LPG선 6년 만 발주 재개는 가스선 시장 회복 신호.<br><br><b>3. 지정학 리스크:</b> 호르무즈(이란)+흑해/아조프해(러시아) 양대 해상 분쟁 동시 진행. 유조선·벌크선 운임 변동성 확대. 방산·조선 섹터 중장기 수혜 지속.<br><br><b>4. 미국 해양 정책:</b> $70B 규모 해양 지배력 투자 계획은 미국 내 조선·해양 산업에 대규모 수요 창출 가능.</div></div>
+<table class="tbl nb"><tr><th>구분</th><th>관련 종목 (참고)</th><th>포인트</th></tr><tr><td>한국 조선</td><td>HD한국조선해양, 한화오션, 삼성중공업</td><td>LPG·유조선 신조 수주 수혜</td></tr><tr><td>유조선</td><td>Frontline, DHT Holdings, Euronav</td><td>VLCC 운임 급등 수혜</td></tr><tr><td>벌크선</td><td>Star Bulk, Golden Ocean, Pan Ocean</td><td>호르무즈 통항 재개 시 긍정적</td></tr><tr><td>LNG</td><td>Flex LNG, Cool Company</td><td>호르무즈 불확실성으로 단기 리스크</td></tr><tr><td>컨테이너</td><td>HMM, Maersk, ZIM</td><td>CMA CGM 해협 통과로 정상화 기대</td></tr></table>
+<div class="ftr">⚠️ 본 브리핑은 자동 생성 콘텐츠이며, 투자 권유가 아닙니다.<br>Source: TradeWinds, Maritime Executive, Seatrade Maritime, Journal of Commerce<br>Generated: 2026-04-07 05:00 KST</div>
+</div>
+</body>
+</html>
