@@ -15,14 +15,15 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 .sector-tab { padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; cursor: pointer; border: 1.5px solid #e2e8f0; background: #f6f8fa; color: #64748b; transition: all 0.2s; }
 .sector-tab.active, .sector-tab:hover { background: #0f172a; color: #fff; border-color: #0f172a; }
 .sector-tab[data-sector="shipping"].active { background: #1e40af; border-color: #1e40af; }
+.sector-tab[data-sector="semi"].active { background: #4338ca; border-color: #4338ca; }
 .list { }
 .item { display: flex; align-items: center; justify-content: space-between; background: #f6f8fa; border: 1px solid #e2e8f0; border-radius: 10px; padding: 16px 20px; margin-bottom: 10px; text-decoration: none; color: inherit; transition: background 0.2s, box-shadow 0.2s; }
 .item:hover { background: #eef2f7; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
-.item.new { border-left: 3px solid #1e40af; }
+.item.new { border-left: 3px solid #4338ca; }
 .item-date { font-size: 15px; font-weight: 700; color: #1a1a2e; }
 .item-sub { font-size: 11px; color: #7a8a9e; margin-top: 3px; max-width: 580px; }
-.badge-new { background: #1e40af; color: #fff; font-size: 10px; font-weight: 800; padding: 2px 8px; border-radius: 4px; white-space: nowrap; }
-.badge-link { color: #1e40af; font-size: 12px; font-weight: 600; white-space: nowrap; }
+.badge-new { background: #4338ca; color: #fff; font-size: 10px; font-weight: 800; padding: 2px 8px; border-radius: 4px; white-space: nowrap; }
+.badge-link { color: #4338ca; font-size: 12px; font-weight: 600; white-space: nowrap; }
 .sector-icon { font-size: 13px; margin-right: 6px; }
 .footer { text-align: center; margin-top: 28px; font-size: 11px; color: #94a3b8; }
 @media (max-width: 600px) { .container { padding: 24px 16px; } .item { flex-direction: column; align-items: flex-start; gap: 8px; } .item-sub { max-width: 100%; } }
@@ -35,26 +36,54 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 <p>매일 오전 5시 — 글로벌 섹터 별 데일리 뉴스 브리핑</p>
 </div>
 <div class="sector-tabs">
-<div class="sector-tab active" data-sector="shipping">🚢 해운</div>
-<div class="sector-tab" data-sector="all" style="opacity:0.5;cursor:default;">+ 더 많은 섹터 (예정)</div>
+<div class="sector-tab active" data-sector="all">전체</div>
+<div class="sector-tab" data-sector="shipping">🚢 해운</div>
+<div class="sector-tab" data-sector="semi">💾 반도체</div>
+<div class="sector-tab" data-sector="more" style="opacity:0.5;cursor:default;">+ 더 많은 섹터 (예정)</div>
 </div>
 <div class="list" id="briefing-list"></div>
 <div class="footer">
-⚠️ 자동 생성 브리핑 — 투자 권유가 아닙니다 &nbsp;|&nbsp; Source: TradeWinds, Maritime Executive, Seatrade Maritime
+⚠️ 자동 생성 브리핑 — 투자 권유가 아닙니다 &nbsp;|&nbsp; Source: TradeWinds, SemiAnalysis, KSIA 외
 </div>
 </div>
 <script>
+const SECTORS = {
+  shipping: { icon: "🚢", name: "해운", color: "#1e40af" },
+  semi:     { icon: "💾", name: "반도체", color: "#4338ca" }
+};
 const b = [
-{ d: "2026-04-07", label: "2026년 4월 7일 (화)", sub: "호르무즈 해협 통항 재개 시작 — 중국 벌크선 선도 통과 / 트럼프, 이란 인프라 파괴 시한 언급 / HD현대, Byzantine Maritime LPG선 수주 / 우크라이나 드론 러시아 벌크선 격침", n: true },
+  { sector: "semi",     d: "2026-04-07", label: "2026년 4월 7일 (화)", sub: "AI 실리콘 대란 — H100 1Y 임대료 +40% / SK하이닉스 EUV M15X 전진 배치 / 삼성전자 SoCAMM2 기술 해결 — 엔비디아 공급 / TSMC vs 삼성 파운드리 점유율 38% vs 4%", n: true },
+  { sector: "shipping", d: "2026-04-07", label: "2026년 4월 7일 (화)", sub: "호르무즈 해협 통항 재개 시작 — 중국 벌크선 선도 통과 / 트럼프, 이란 인프라 파괴 시한 언급 / HD현대, Byzantine Maritime LPG선 수주 / 우크라이나 드론 러시아 벌크선 격침", n: true }
 ];
 const list = document.getElementById('briefing-list');
-b.forEach(item => {
-const a = document.createElement('a');
-a.className = 'item' + (item.n ? ' new' : '');
-a.href = `briefings/shipping-daily-${item.d}.html`;
-a.innerHTML = `<div><div class="item-date"><span class="sector-icon">🚢</span>${item.label}</div><div class="item-sub">${item.sub}</div></div><div style="display:flex;align-items:center;gap:10px;">${item.n ? '<span class="badge-new">NEW</span>' : ''}<span class="badge-link">브리핑 보기 →</span></div>`;
-list.appendChild(a);
+const tabs = document.querySelectorAll('.sector-tab');
+let activeFilter = "all";
+
+function render() {
+  list.innerHTML = "";
+  const filtered = activeFilter === "all" ? b : b.filter(x => x.sector === activeFilter);
+  filtered.forEach(item => {
+    const meta = SECTORS[item.sector] || { icon: "📄", name: item.sector };
+    const a = document.createElement('a');
+    a.className = 'item' + (item.n ? ' new' : '');
+    a.href = `briefings/${item.sector}-daily-${item.d}.html`;
+    a.innerHTML = `<div><div class="item-date"><span class="sector-icon">${meta.icon}</span>${meta.name} · ${item.label}</div><div class="item-sub">${item.sub}</div></div><div style="display:flex;align-items:center;gap:10px;">${item.n ? '<span class="badge-new">NEW</span>' : ''}<span class="badge-link">브리핑 보기 →</span></div>`;
+    list.appendChild(a);
+  });
+}
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    const s = tab.dataset.sector;
+    if (s === "more") return;
+    tabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    activeFilter = s;
+    render();
+  });
 });
+
+render();
 </script>
 </body>
 </html>

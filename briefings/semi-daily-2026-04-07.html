@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>반도체 섹터 데일리 브리핑 | 2026.04.07</title>
+<style>
+@page{size:A4 portrait;margin:10mm 12mm}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
+:root{--navy:#0f172a;--navy2:#1e293b;--navy3:#334155;--red:#dc2626;--red-bg:#fef2f2;--red-light:#fee2e2;--blue:#1e40af;--blue-bg:#eff6ff;--blue-light:#dbeafe;--green:#16a34a;--green-bg:#f0fdf4;--green-light:#dcfce7;--amber:#d97706;--amber-bg:#fffbeb;--amber-light:#fef3c7;--purple:#7c3aed;--purple-bg:#faf5ff;--purple-light:#ede9fe;--slate:#334155;--slate2:#64748b;--slate3:#94a3b8;--slate4:#cbd5e1;--slate5:#e2e8f0;--slate6:#f1f5f9;--white:#fff;--ink:#0f172a}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+body{font-family:'Noto Sans KR',-apple-system,sans-serif;color:var(--ink);background:var(--white);font-size:9pt;line-height:1.55}
+.page{width:186mm;max-width:186mm;margin:0 auto}
+.page-break{page-break-before:always}
+.nb{page-break-inside:avoid;break-inside:avoid}
+@media screen{body{background:#dde3ea;padding:24px 0}.page{background:#fff;padding:10mm 12mm;box-shadow:0 4px 20px rgba(0,0,0,.12);border-radius:6px;margin-bottom:20px}}
+.hdr{background:linear-gradient(135deg,#1e1b4b,#312e81 50%,#4338ca)!important;border-radius:8px;padding:14px 18px;margin-bottom:14px;display:flex;justify-content:space-between;align-items:center;color:#fff}
+.hdr h1{font-size:15pt;font-weight:900;letter-spacing:-.8px}
+.hdr .sub{font-size:7.5pt;color:#c7d2fe;margin-top:2px}
+.hdr .dt{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);padding:5px 14px;border-radius:20px;font-size:8pt;font-weight:700}
+.hero{border-radius:8px;padding:14px 16px;margin-bottom:14px;display:flex;align-items:flex-start;gap:12px}
+.hero.alert{background:linear-gradient(135deg,#fef2f2,#fff1f2)!important;border:1.5px solid #fca5a5}
+.hero.positive{background:linear-gradient(135deg,#eff6ff,#dbeafe)!important;border:1.5px solid #93c5fd}
+.hero-icon{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.hero.alert .hero-icon{background:var(--red);color:#fff}
+.hero.positive .hero-icon{background:var(--blue);color:#fff}
+.hero-text{font-size:8.5pt;line-height:1.65}
+.hero.alert .hero-text{color:#991b1b}
+.hero.positive .hero-text{color:#1e3a5f}
+.hero-text b{font-weight:900}
+.sec{margin-bottom:14px}
+.sec-title{font-size:10.5pt;font-weight:900;color:var(--navy);padding-bottom:6px;border-bottom:2px solid var(--navy);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.sec-title .icon{font-size:14px}
+.news-grid{display:grid;grid-template-columns:1fr;gap:8px}
+.news-card{background:var(--slate6);border:1px solid var(--slate5);border-radius:8px;padding:12px 14px}
+.news-card.highlight{border-left:3px solid var(--red);background:var(--red-bg)}
+.news-card.info{border-left:3px solid var(--blue);background:var(--blue-bg)}
+.news-card.deal{border-left:3px solid var(--green);background:var(--green-bg)}
+.news-card.warning{border-left:3px solid var(--amber);background:var(--amber-bg)}
+.news-card.tech{border-left:3px solid var(--purple);background:var(--purple-bg)}
+.news-tag{font-size:6.5pt;font-weight:800;text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px}
+.news-card.highlight .news-tag{color:var(--red)}
+.news-card.info .news-tag{color:var(--blue)}
+.news-card.deal .news-tag{color:var(--green)}
+.news-card.warning .news-tag{color:var(--amber)}
+.news-card.tech .news-tag{color:var(--purple)}
+.news-title{font-size:9.5pt;font-weight:800;color:var(--navy);margin-bottom:4px}
+.news-body{font-size:8pt;color:var(--slate);line-height:1.6}
+.kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px}
+.kpi{text-align:center;padding:10px 6px;border-radius:8px;border:1px solid var(--slate5)}
+.kpi.up{background:var(--red-bg);border-color:var(--red-light)}
+.kpi.dn{background:var(--blue-bg);border-color:var(--blue-light)}
+.kpi.neu{background:var(--slate6)}
+.kpi-lb{font-size:6.5pt;font-weight:700;color:var(--slate3);text-transform:uppercase;letter-spacing:.5px}
+.kpi-v{font-size:12pt;font-weight:900;margin-top:3px}
+.kpi.up .kpi-v{color:var(--red)}
+.kpi.dn .kpi-v{color:var(--blue)}
+.insight{background:linear-gradient(135deg,#f8fafc,#f1f5f9);border:1px solid var(--slate5);border-radius:8px;padding:14px 16px;margin-bottom:14px}
+.insight-title{font-size:9pt;font-weight:800;color:var(--navy);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.insight-body{font-size:8pt;color:var(--slate);line-height:1.7}
+.tbl{width:100%;border-collapse:collapse;font-size:7.5pt;margin-bottom:14px}
+.tbl th{background:var(--navy)!important;color:#fff;font-weight:700;padding:7px 10px;text-align:left;font-size:7pt;text-transform:uppercase;letter-spacing:.5px}
+.tbl td{padding:7px 10px;border-bottom:1px solid var(--slate5)}
+.tbl tr:nth-child(even) td{background:var(--slate6)!important}
+.back-btn{display:inline-block;margin-bottom:14px;padding:6px 14px;background:var(--slate6);border:1px solid var(--slate5);border-radius:6px;text-decoration:none;color:var(--slate);font-size:8pt;font-weight:600}
+.ftr{margin-top:16px;padding-top:12px;border-top:1px solid var(--slate5);font-size:7pt;color:var(--slate3);text-align:center;line-height:1.6}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:600px){.two-col{grid-template-columns:1fr}.kpi-row{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<div class="page">
+<a href="../index.html" class="back-btn">← 브리핑 목록</a>
+<div class="hdr"><div><h1>Global Semiconductor Daily Briefing</h1><div class="sub">반도체·AI 칩 섹터 데일리 뉴스 브리핑</div></div><div class="dt">2026.04.07 (화)</div></div>
+
+<div class="hero alert"><div class="hero-icon">⚡</div><div class="hero-text"><b>AI 실리콘 대란 심화 — H100 임대료 1년 새 +40%, GPU 세대전쟁 점화.</b> SemiAnalysis는 Anthropic ARR이 한 분기 만에 $9B → $30B로 3배 이상 급증하면서 H100 1년 임대 가격 지수가 +40% 폭등했다고 분석. 동시에 한국에서는 SK하이닉스가 EUV를 M15X 1b D램에 전진 배치, 삼성전자는 EUV 대량 발주로 P5 클린룸을 내년 준공한다고 발표. 글로벌 빅테크의 한국 메모리 러브콜 + 엔비디아 칩 1만 5천장 선확보 경쟁이 동시 진행 중.</div></div>
+
+<div class="kpi-row">
+<div class="kpi up"><div class="kpi-lb">H100 1Y 임대</div><div class="kpi-v">+40%</div></div>
+<div class="kpi up"><div class="kpi-lb">Anthropic ARR</div><div class="kpi-v">$30B</div></div>
+<div class="kpi neu"><div class="kpi-lb">파운드리 점유율</div><div class="kpi-v">TSMC 38%</div></div>
+<div class="kpi dn"><div class="kpi-lb">삼성 파운드리</div><div class="kpi-v">4%</div></div>
+</div>
+
+<div class="sec"><div class="sec-title"><span class="icon">🔥</span> AI 컴퓨팅 — GPU 임대료 폭등 &amp; 공급 부족</div><div class="news-grid">
+<div class="news-card highlight nb"><div class="news-tag">SemiAnalysis · GPU Rental</div><div class="news-title">The Great GPU Shortage — H100 1년 임대료 +40% 폭등, SemiAnalysis 가격 지수 출시</div><div class="news-body">SemiAnalysis가 H100 1년 렌탈 가격 지수를 정식 런칭. Anthropic ARR이 분기 만에 $9B → $30B로 3배 이상 증가했고, GLM·Kimi K2.5 같은 오픈모델 사용 확대, OpenAI·Neolab들의 자본 조달이 GPU 수요를 동시 자극. "클러스터 빌리는 게 마약 사는 것 같다"는 표현이 시장 분위기를 요약. 단기 계약 만기 도래로 Neocloud 마진 확대 임박.</div></div>
+<div class="news-card highlight nb"><div class="news-tag">SemiAnalysis · AI Silicon</div><div class="news-title">The Great AI Silicon Shortage — TSMC N3 웨이퍼·메모리·데이터센터 동시 병목</div><div class="news-body">TSMC N3 웨이퍼 부족, HBM 메모리 제약, 데이터센터 인프라 병목이 동시에 발생하며 AI 실리콘 공급 사슬 전반에 구조적 부족이 형성. 공급망 전쟁의 승자를 가르는 결정적 국면.</div></div>
+<div class="news-card info nb"><div class="news-tag">Naver · GPU 확보 경쟁</div><div class="news-title">엔비디아 칩 1만 5000장 먼저 들여온다 — 'GPU 세대전쟁' 점화</div><div class="news-body">국내 빅테크/하이퍼스케일러들이 차세대 엔비디아 GPU 1만 5천장을 선제적으로 확보하며 GPU 세대 전환 경쟁이 본격화. AI 인프라 확보가 경쟁력 핵심 변수로 부상.</div></div>
+</div></div>
+
+<div class="sec nb"><div class="sec-title"><span class="icon">🇰🇷</span> 한국 메모리 — SK하이닉스 / 삼성전자</div><div class="news-grid">
+<div class="news-card info nb"><div class="news-tag">SK Hynix · DRAM</div><div class="news-title">SK하이닉스, EUV 전진 배치 — M15X에서 1b D램 증산 가속</div><div class="news-body">SK하이닉스가 EUV 노광 장비를 M15X 팹에 전진 배치하면서 1b 나노 D램 증산 속도를 높임. HBM 수요 폭증에 대응하는 메모리 캐파 공격적 확장.</div></div>
+<div class="news-card info nb"><div class="news-tag">SK Hynix · HBM Roadmap</div><div class="news-title">"SK하이닉스, 2029년 HBM5 출시" — 차세대 로드맵 공식화</div><div class="news-body">SK하이닉스가 HBM5의 2029년 출시 계획을 공식화. HBM4 → HBM5로 이어지는 메모리 우위를 굳히려는 행보.</div></div>
+<div class="news-card info nb"><div class="news-tag">Samsung · Nvidia Supply</div><div class="news-title">삼성전자, 엔비디아향 '소캠2(SoCAMM2)' 기술 난제 해결 — 저온 납땜 승부수</div><div class="news-body">삼성전자가 엔비디아 공급용 SoCAMM2 모듈의 저온 납땜 기술 난제를 해결. 엔비디아 차세대 플랫폼 메모리 공급권 확보를 위한 결정적 진전.</div></div>
+<div class="news-card info nb"><div class="news-tag">Samsung · Capex</div><div class="news-title">삼성전자, EUV 대량 발주 — "내년 P5 첫 클린룸 준공"</div><div class="news-body">삼성전자가 EUV 노광 장비를 대량 발주, 평택 P5 팹 첫 클린룸을 2027년 준공할 계획. 메모리·파운드리 캐파 공격적 확장 신호.</div></div>
+<div class="news-card deal nb"><div class="news-tag">Samsung · CXL</div><div class="news-title">삼성전자·ETRI·프라임마스, CXL 초대용량 메모리 협력</div><div class="news-body">삼성전자가 ETRI, 프라임마스와 함께 CXL(Compute Express Link) 기반 초대용량 메모리 솔루션 공동 개발. 차세대 데이터센터 메모리 아키텍처에서 한국 진영 역량 결집.</div></div>
+<div class="news-card deal nb"><div class="news-tag">Big Tech · Korea Memory</div><div class="news-title">구글·MS 등 美 빅테크, 韓 반도체에 잇단 러브콜</div><div class="news-body">구글·마이크로소프트 등 미국 빅테크가 한국 메모리 업체에 잇따라 협력 제안. AI 가속기 수요 폭증으로 HBM·DDR5·CXL 메모리 공급 확보가 핵심 화두.</div></div>
+</div></div>
+</div>
+
+<div class="page page-break">
+<div class="sec"><div class="sec-title"><span class="icon">🏭</span> 파운드리 — TSMC vs 삼성</div><div class="two-col">
+<div class="news-card warning nb"><div class="news-tag">Foundry · Market Share</div><div class="news-title">'파운드리 2.0' — TSMC 38% vs 삼성전자 4%, 격차 확대</div><div class="news-body">파운드리 시장 점유율에서 TSMC가 38%로 압도적 우위, 삼성전자는 4%에 그침. 첨단 공정 경쟁에서 격차가 커지며 삼성은 구조적 도전 직면.</div></div>
+<div class="news-card info nb"><div class="news-tag">TSMC · Capex</div><div class="news-title">TSMC, 美 애리조나 공장 규모 확대 — 삼성·SK도 국내외 전방위 투자</div><div class="news-body">TSMC가 미국 애리조나 공장 규모를 추가 확대. 삼성전자·SK하이닉스도 국내외 전방위 캐파 증설로 맞대응. 글로벌 첨단 팹 캐파 경쟁 가속.</div></div>
+<div class="news-card highlight nb"><div class="news-tag">Samsung · Race</div><div class="news-title">"삼성이 먼저 치고 나간다" — 독주 균열 조짐, 긴장한 대만</div><div class="news-body">삼성전자의 선제적 공격에 TSMC 독주 체제에 균열 조짐이 감지되며 대만 업계가 긴장. 차세대 노드(2nm/1.4nm) 경쟁에서 한국 진영의 반격 시도.</div></div>
+<div class="news-card warning nb"><div class="news-tag">China · Growth</div><div class="news-title">中 파운드리·메모리·AI칩 기업, 줄줄이 사상 최대 매출</div><div class="news-body">중국 파운드리(SMIC), 메모리(YMTC, CXMT), AI칩(Cambricon, Huawei) 기업들이 일제히 사상 최대 매출 기록. 美 제재 속에서도 내수 + 자급화 모멘텀 강화.</div></div>
+</div></div>
+
+<div class="sec nb"><div class="sec-title"><span class="icon">🔬</span> 기술 — Nvidia Blackwell &amp; 차세대 아키텍처</div><div class="news-grid">
+<div class="news-card tech nb"><div class="news-tag">SemiAnalysis · Blackwell</div><div class="news-title">Dissecting Nvidia Blackwell — Tensor Core, PTX, SASS, Yield 심층 분석</div><div class="news-body">SemiAnalysis가 Blackwell 아키텍처를 수개월간 마이크로벤치마킹. tcgen05·2SM MMA·UMMA·TMA·LDGSTS·UBLKCP 등 신규 PTX 명령어 성능, 분산 공유 메모리(DSM), GPC Floorsweep, 수율 분석을 공개. FlashInfer 같은 딥러닝 라이브러리에서 사용되는 비동기 메모리 복사 패턴까지 측정.</div></div>
+<div class="news-card tech nb"><div class="news-tag">SemiAnalysis · Inference</div><div class="news-title">Nvidia – The Inference Kingdom Expands (Groq LP30, Vera, Oberon, Kyber)</div><div class="news-body">엔비디아의 추론 시장 확장 분석. Groq LP30/LPX Rack, Attention-FFN Disaggregation, Oberon &amp; Kyber 업데이트, CPO 로드맵, Vera ETL256, CMX/STX 등 차세대 추론 인프라 전반의 경쟁 구도.</div></div>
+<div class="news-card tech nb"><div class="news-tag">SemiAnalysis · Vera Rubin</div><div class="news-title">Vera Rubin — Extreme Co-Design, NVLink 6 / ConnectX-9 / BlueField-4 통합</div><div class="news-body">엔비디아의 차세대 플랫폼 Vera Rubin 분석: NVLink 6 Switch, ConnectX-9, BlueField-4, Spectrum-6, Seamless Cableless Compute Tray 디자인. Grace Blackwell Oberon에서 발전한 Extreme Co-Design 방법론.</div></div>
+</div></div>
+
+<table class="tbl nb"><tr><th>구분</th><th>주체</th><th>내용</th><th>임팩트</th></tr>
+<tr><td>메모리</td><td>SK하이닉스</td><td>EUV M15X 전진 배치, 1b D램 증산</td><td>HBM·D램 공급 확대</td></tr>
+<tr><td>메모리</td><td>SK하이닉스</td><td>HBM5 2029년 출시 로드맵</td><td>HBM 우위 장기화</td></tr>
+<tr><td>메모리</td><td>삼성전자</td><td>SoCAMM2 저온 납땜 기술 해결</td><td>엔비디아 공급 진입</td></tr>
+<tr><td>Capex</td><td>삼성전자</td><td>EUV 대량 발주, P5 클린룸 내년 준공</td><td>캐파 공격 확장</td></tr>
+<tr><td>Capex</td><td>TSMC</td><td>美 애리조나 공장 규모 확대</td><td>지정학 분산 가속</td></tr>
+<tr><td>AI 칩</td><td>Nvidia</td><td>Blackwell 양산, Vera Rubin 차기 플랫폼</td><td>독주 체제 강화</td></tr>
+<tr><td>GPU 임대</td><td>Neocloud/Hyperscaler</td><td>H100 1Y 임대료 +40%</td><td>마진 확대 사이클</td></tr>
+<tr><td>중국</td><td>SMIC/YMTC/CXMT/Cambricon</td><td>사상 최대 매출 동시 경신</td><td>자급화 가속</td></tr></table>
+</div>
+
+<div class="page page-break">
+<div class="sec"><div class="sec-title"><span class="icon">⚖️</span> 정책·인재·지정학</div><div class="news-grid">
+<div class="news-card warning nb"><div class="news-tag">Taiwan · Talent</div><div class="news-title">대만, 中 기업의 반도체·AI 인재 빼가기 단속 강화</div><div class="news-body">대만 정부가 중국 기업의 자국 반도체·AI 인재 빼가기에 대한 단속을 강화. 첨단 공정 핵심 인력 유출 방지를 위한 법적·행정적 조치 확대.</div></div>
+<div class="news-card info nb"><div class="news-tag">Korea · Education</div><div class="news-title">"석·박사 인재 육성" — 정부, '반도체 대학원대학' 본격 추진</div><div class="news-body">한국 정부가 반도체 분야 석·박사급 인재 양성을 위한 '반도체 대학원대학' 설립을 본격 추진. 만성적 인력 부족 대응책.</div></div>
+<div class="news-card info nb"><div class="news-tag">Korea · ESG</div><div class="news-title">반도체 운반 플라스틱 접시·자투리 석재, 순환자원 지정</div><div class="news-body">정부가 반도체 공정에서 발생하는 운반용 플라스틱 트레이와 자투리 석재를 순환자원으로 지정. 반도체 산업 ESG·자원순환 정책 강화.</div></div>
+<div class="news-card info nb"><div class="news-tag">Korea · Space</div><div class="news-title">'라드큐브'는 시작일 뿐 — K-착륙선도 2030년 '달' 간다</div><div class="news-body">한국형 우주 탐사 프로젝트 '라드큐브'를 시작으로 2030년 달 착륙선 발사 계획. 우주·국방 반도체 수요 잠재적 확장.</div></div>
+</div></div>
+
+<div class="insight nb"><div class="insight-title">💡 투자 시사점 (반도체 섹터)</div><div class="insight-body"><b>1. AI 컴퓨팅 슈퍼사이클 지속:</b> SemiAnalysis 분석상 H100 1년 임대료 +40%, Anthropic ARR 분기 3배 증가, TSMC N3 + HBM + 데이터센터 동시 병목으로 AI 실리콘 공급 부족이 구조화. 2026~2027년 메모리·파운드리·전력 인프라 모두 매도자 시장.<br><br><b>2. 한국 메모리 — HBM 우위 견고:</b> SK하이닉스 EUV M15X 전진 배치 + HBM5 로드맵, 삼성 SoCAMM2 기술 해결 + 엔비디아 공급 진입은 HBM/AI 메모리 한국 양강 구도 강화. 빅테크 러브콜은 가격 협상력으로 직결.<br><br><b>3. 파운드리 — TSMC 독주 vs 삼성 반격:</b> 점유율 38% vs 4% 격차는 단기 해소 어려우나, 2nm/1.4nm 노드에서 삼성의 선제 공격이 균열 조짐. 다만 실적 반영은 시간 필요.<br><br><b>4. 캐파 사이클 본격화:</b> 삼성 P5 첫 클린룸 2027 준공, TSMC 애리조나 확장, SK하이닉스 M15X 가속 — 장비주(EUV는 ASML, 부품·소재는 한국 후공정 체인) 직접 수혜.<br><br><b>5. 중국 자급화 가속:</b> SMIC/YMTC/CXMT/Cambricon 동반 사상 최대 매출은 美 제재의 역설적 효과. 중장기 글로벌 메모리·파운드리 공급 과잉 리스크 모니터링 필요.</div></div>
+
+<table class="tbl nb"><tr><th>구분</th><th>관련 종목 (참고)</th><th>포인트</th></tr>
+<tr><td>HBM·D램</td><td>SK하이닉스, 삼성전자, 마이크론</td><td>HBM4/5 캐파 + 빅테크 공급권</td></tr>
+<tr><td>EUV·노광</td><td>ASML</td><td>P5/M15X 대량 발주 수혜</td></tr>
+<tr><td>장비·소재</td><td>원익IPS, 한미반도체, 솔브레인, 동진쎄미켐</td><td>국내 캐파 증설 직접 수혜</td></tr>
+<tr><td>AI 가속기</td><td>Nvidia, AMD, Broadcom</td><td>Blackwell·Vera Rubin·Inference 확장</td></tr>
+<tr><td>파운드리</td><td>TSMC, 삼성전자</td><td>2nm/1.4nm 노드 경쟁</td></tr>
+<tr><td>Neocloud</td><td>CoreWeave, Nebius, Crusoe</td><td>H100 임대료 +40% 마진 확대</td></tr>
+<tr><td>중국 반도체</td><td>SMIC, Cambricon, Hua Hong</td><td>자급화 매출 사상 최대</td></tr></table>
+
+<div class="ftr">⚠️ 본 브리핑은 자동 생성 콘텐츠이며, 투자 권유가 아닙니다.<br>Source: SemiAnalysis (newsletter.semianalysis.com), 한국반도체산업협회(KSIA) 데일리뉴스, 매일경제·전자신문·이데일리·머니투데이 외<br>Generated: 2026-04-07 KST</div>
+</div>
+</body>
+</html>
