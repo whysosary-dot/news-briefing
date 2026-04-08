@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>반도체 섹터 데일리 브리핑 | 2026.04.08</title>
+<style>
+@page{size:A4 portrait;margin:10mm 12mm}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
+:root{--navy:#0f172a;--navy2:#1e293b;--navy3:#334155;--red:#dc2626;--red-bg:#fef2f2;--red-light:#fee2e2;--blue:#1e40af;--blue-bg:#eff6ff;--blue-light:#dbeafe;--green:#16a34a;--green-bg:#f0fdf4;--green-light:#dcfce7;--amber:#d97706;--amber-bg:#fffbeb;--amber-light:#fef3c7;--purple:#7c3aed;--purple-bg:#faf5ff;--purple-light:#ede9fe;--slate:#334155;--slate2:#64748b;--slate3:#94a3b8;--slate4:#cbd5e1;--slate5:#e2e8f0;--slate6:#f1f5f9;--white:#fff;--ink:#0f172a}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+body{font-family:'Noto Sans KR',-apple-system,sans-serif;color:var(--ink);background:var(--white);font-size:9pt;line-height:1.55}
+.page{width:186mm;max-width:186mm;margin:0 auto}
+.page-break{page-break-before:always}
+.nb{page-break-inside:avoid;break-inside:avoid}
+@media screen{body{background:#dde3ea;padding:24px 0}.page{background:#fff;padding:10mm 12mm;box-shadow:0 4px 20px rgba(0,0,0,.12);border-radius:6px;margin-bottom:20px}}
+.hdr{background:linear-gradient(135deg,#1e1b4b,#312e81 50%,#4338ca)!important;border-radius:8px;padding:14px 18px;margin-bottom:14px;display:flex;justify-content:space-between;align-items:center;color:#fff}
+.hdr h1{font-size:15pt;font-weight:900;letter-spacing:-.8px}
+.hdr .sub{font-size:7.5pt;color:#c7d2fe;margin-top:2px}
+.hdr .dt{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);padding:5px 14px;border-radius:20px;font-size:8pt;font-weight:700}
+.hero{border-radius:8px;padding:14px 16px;margin-bottom:14px;display:flex;align-items:flex-start;gap:12px}
+.hero.alert{background:linear-gradient(135deg,#fef2f2,#fff1f2)!important;border:1.5px solid #fca5a5}
+.hero.positive{background:linear-gradient(135deg,#eff6ff,#dbeafe)!important;border:1.5px solid #93c5fd}
+.hero-icon{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.hero.alert .hero-icon{background:var(--red);color:#fff}
+.hero.positive .hero-icon{background:var(--blue);color:#fff}
+.hero-text{font-size:8.5pt;line-height:1.65}
+.hero.alert .hero-text{color:#991b1b}
+.hero.positive .hero-text{color:#1e3a5f}
+.hero-text b{font-weight:900}
+.sec{margin-bottom:14px}
+.sec-title{font-size:10.5pt;font-weight:900;color:var(--navy);padding-bottom:6px;border-bottom:2px solid var(--navy);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.sec-title .icon{font-size:14px}
+.news-grid{display:grid;grid-template-columns:1fr;gap:8px}
+.news-card{background:var(--slate6);border:1px solid var(--slate5);border-radius:8px;padding:12px 14px}
+.news-card.highlight{border-left:3px solid var(--red);background:var(--red-bg)}
+.news-card.info{border-left:3px solid var(--blue);background:var(--blue-bg)}
+.news-card.deal{border-left:3px solid var(--green);background:var(--green-bg)}
+.news-card.warning{border-left:3px solid var(--amber);background:var(--amber-bg)}
+.news-card.tech{border-left:3px solid var(--purple);background:var(--purple-bg)}
+.news-tag{font-size:6.5pt;font-weight:800;text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px}
+.news-card.highlight .news-tag{color:var(--red)}
+.news-card.info .news-tag{color:var(--blue)}
+.news-card.deal .news-tag{color:var(--green)}
+.news-card.warning .news-tag{color:var(--amber)}
+.news-card.tech .news-tag{color:var(--purple)}
+.news-title{font-size:9.5pt;font-weight:800;color:var(--navy);margin-bottom:4px}
+.news-body{font-size:8pt;color:var(--slate);line-height:1.6}
+.kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px}
+.kpi{text-align:center;padding:10px 6px;border-radius:8px;border:1px solid var(--slate5)}
+.kpi.up{background:var(--red-bg);border-color:var(--red-light)}
+.kpi.dn{background:var(--blue-bg);border-color:var(--blue-light)}
+.kpi.neu{background:var(--slate6)}
+.kpi-lb{font-size:6.5pt;font-weight:700;color:var(--slate3);text-transform:uppercase;letter-spacing:.5px}
+.kpi-v{font-size:12pt;font-weight:900;margin-top:3px}
+.kpi.up .kpi-v{color:var(--red)}
+.kpi.dn .kpi-v{color:var(--blue)}
+.insight{background:linear-gradient(135deg,#f8fafc,#f1f5f9);border:1px solid var(--slate5);border-radius:8px;padding:14px 16px;margin-bottom:14px}
+.insight-title{font-size:9pt;font-weight:800;color:var(--navy);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.insight-body{font-size:8pt;color:var(--slate);line-height:1.7}
+.tbl{width:100%;border-collapse:collapse;font-size:7.5pt;margin-bottom:14px}
+.tbl th{background:var(--navy)!important;color:#fff;font-weight:700;padding:7px 10px;text-align:left;font-size:7pt;text-transform:uppercase;letter-spacing:.5px}
+.tbl td{padding:7px 10px;border-bottom:1px solid var(--slate5)}
+.tbl tr:nth-child(even) td{background:var(--slate6)!important}
+.back-btn{display:inline-block;margin-bottom:14px;padding:6px 14px;background:var(--slate6);border:1px solid var(--slate5);border-radius:6px;text-decoration:none;color:var(--slate);font-size:8pt;font-weight:600}
+.ftr{margin-top:16px;padding-top:12px;border-top:1px solid var(--slate5);font-size:7pt;color:var(--slate3);text-align:center;line-height:1.6}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:600px){.two-col{grid-template-columns:1fr}.kpi-row{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<div class="page">
+<a href="../index.html" class="back-btn">← 브리핑 목록</a>
+<div class="hdr"><div><h1>Global Semiconductor Daily Briefing</h1><div class="sub">반도체·AI 칩 섹터 데일리 뉴스 브리핑</div></div><div class="dt">2026.04.08 (수)</div></div>
+
+<div class="hero alert"><div class="hero-icon">⚡</div><div class="hero-text"><b>GPU 렌탈 캐파 전면 매진 — Blackwell 신규 배치 리드타임 6~7월까지, 8~9월 캐파도 예약 완료.</b> SemiAnalysis는 모든 GPU 타입의 온디맨드 렌탈 캐파가 매진됐고, 시장 전체 캐파가 2026년 8~9월까지 이미 전부 부킹됐다고 보도. Anthropic은 단일월(2월)에만 +$6B ARR를 추가하며 Claude Code 어젠틱 코딩 수요가 GPU 부족을 가속. 한편 삼성전자는 엔비디아 'Rubin' 탑재용 HBM4 공급을 위해 1c(10나노급 6세대) D램 개발에 성공했고, SK하이닉스는 청주 M15X에 20조원 이상 투입해 HBM3E·HBM4 거점화를 진행 중. 키움증권은 2026년 삼성 영업이익 200조·SK하이닉스 170조 합산 370조 시나리오를 제시.</div></div>
+
+<div class="kpi-row">
+<div class="kpi up"><div class="kpi-lb">TSMC 2026 매출</div><div class="kpi-v">+30% YoY</div></div>
+<div class="kpi up"><div class="kpi-lb">TSMC 2026 Capex</div><div class="kpi-v">$56B</div></div>
+<div class="kpi neu"><div class="kpi-lb">TSMC 파운드리 점유율</div><div class="kpi-v">~68%</div></div>
+<div class="kpi up"><div class="kpi-lb">Anthropic 2월 ARR 증분</div><div class="kpi-v">+$6B</div></div>
+</div>
+
+<div class="sec"><div class="sec-title"><span class="icon">🔥</span> AI 컴퓨팅 — GPU 캐파 전면 매진 &amp; 추론 슈퍼사이클</div><div class="news-grid">
+<div class="news-card highlight nb"><div class="news-tag">SemiAnalysis · GPU Rental</div><div class="news-title">Great GPU Shortage — 온디맨드 렌탈 캐파 전 GPU 타입 매진, 8~9월 캐파까지 사전 예약 완료</div><div class="news-body">SemiAnalysis는 온디맨드 GPU 렌탈 캐파가 모든 GPU 타입에서 매진 상태이며, 신규 Blackwell 배치 리드타임이 6~7월로 밀렸고 시장 전체적으로 8~9월 가동분 캐파까지 이미 부킹 완료됐다고 분석. 2년 전 출시된 Hopper의 온디맨드 가격조차 계속 상승 중.</div></div>
+<div class="news-card highlight nb"><div class="news-tag">SemiAnalysis · AI Silicon</div><div class="news-title">Great AI Silicon Shortage — 웨이퍼 재배분 시 Rubin 70만개·TPU v7 150만개 추가 가능성</div><div class="news-body">SemiAnalysis는 AI 가속기로 웨이퍼 캐파를 재배분할 경우 Rubin GPU 약 70만개 또는 TPU v7 약 150만개를 추가 생산할 수 있다고 추정. Anthropic은 2월 한 달에만 ARR을 +$6B 늘렸고 그 동력은 Claude Code 어젠틱 코딩 플랫폼.</div></div>
+<div class="news-card info nb"><div class="news-tag">Nvidia · GTC 2026</div><div class="news-title">엔비디아 GTC 2026 — Vera CPU·Rubin GPU·NVLink 6 등 6개 신칩 공개, 모두 TSMC 3nm</div><div class="news-body">젠슨 황 CEO는 GTC 2026에서 차세대 슈퍼컴퓨터 플랫폼을 공개하며 Vera CPU, Rubin GPU, NVLink 6 스위치, ConnectX-9 SuperNIC, BlueField-4 DPU, Spectrum-X 이더넷 스위치 등 6개 신규 칩이 모두 TSMC 3nm 공정으로 풀생산에 들어갔다고 밝힘.</div></div>
+</div></div>
+
+<div class="sec nb"><div class="sec-title"><span class="icon">🇰🇷</span> 한국 메모리 — SK하이닉스 / 삼성전자</div><div class="news-grid">
+<div class="news-card info nb"><div class="news-tag">Samsung · HBM4</div><div class="news-title">삼성전자, 1c(10나노급 6세대) D램 개발 성공 — Nvidia 'Rubin' 탑재 HBM4 공급 발판</div><div class="news-body">삼성전자가 차세대 HBM4 시장 역전을 위한 핵심인 10나노급 6세대(1c) D램 개발에 성공. 엔비디아 차세대 AI 가속기 'Rubin'에 탑재될 HBM4 공급권 확보를 위한 결정적 진전.</div></div>
+<div class="news-card info nb"><div class="news-tag">SK Hynix · M15X</div><div class="news-title">SK하이닉스, 청주 M15X에 20조원+ 투입 — HBM3E·HBM4 생산 거점 육성</div><div class="news-body">SK하이닉스는 2025년 29조원에 이어 2026년 30조원대 중반까지 설비투자를 확대할 계획이며, 청주 M15X 팹에 20조원 이상을 투입해 HBM3E와 HBM4 생산 거점으로 키울 방침.</div></div>
+<div class="news-card deal nb"><div class="news-tag">Outlook · Operating Profit</div><div class="news-title">키움증권 "삼성 200조·SK하이닉스 170조" — 2026년 합산 영업익 370조 시나리오</div><div class="news-body">키움증권 업황 보고서는 삼성전자의 2026년 영업이익을 200조원, SK하이닉스를 170조원으로 상향 제시. 합산 370조원은 종전 시장 컨센서스를 뒤엎는 수치로, AI 추론 서버용 HBM·eSSD 수요와 범용 DRAM·NAND 가격 분기 50~60% 급등이 동시에 작용.</div></div>
+<div class="news-card deal nb"><div class="news-tag">Memory · Pricing</div><div class="news-title">DRAM·NAND 가격, 분기 50~60% 급등 — AI 메모리 열기가 모바일 범용까지 확산</div><div class="news-body">AI 추론 서버향 HBM·eSSD에서 시작된 수요 열기가 모바일 범용 메모리로 빠르게 번지면서, DRAM과 NAND 가격이 분기마다 50~60%씩 급등하며 한국 메모리 양사 수익성을 이중으로 끌어올림.</div></div>
+<div class="news-card info nb"><div class="news-tag">SK Hynix · 2026 Outlook</div><div class="news-title">SK하이닉스 "HBM이 이끄는 메모리 슈퍼사이클" — 2026 시장 전망 공식 발표</div><div class="news-body">SK하이닉스가 2026년 시장 전망 보고서를 통해 HBM이 메모리 슈퍼사이클을 견인할 것이며, HBM3E·HBM4 모두 안정 공급 가능한 위치를 강조. AI 가속기 수요가 메모리 시장 재편의 중심축.</div></div>
+<div class="news-card info nb"><div class="news-tag">Capex · Investment</div><div class="news-title">삼성·SK 합산 70조 투자 전쟁 — "HBM4·AI 슈퍼사이클 승부수"</div><div class="news-body">삼성전자와 SK하이닉스가 2026년 합산 70조원 규모의 설비투자에 나서며 HBM4 및 AI 인프라 캐파 확대를 위한 정면 승부 돌입.</div></div>
+</div></div>
+</div>
+
+<div class="page page-break">
+<div class="sec"><div class="sec-title"><span class="icon">🏭</span> 파운드리 — TSMC 독주 / 삼성 추격</div><div class="two-col">
+<div class="news-card warning nb"><div class="news-tag">TSMC · Market Share</div><div class="news-title">TSMC 파운드리 점유율 약 68% — 작년 대비 경쟁사 4배 빠른 성장</div><div class="news-body">TSMC가 매출 기준 글로벌 파운드리 시장의 약 68%를 차지하며 2025년 경쟁 파운드리 대비 4배 빠른 성장을 기록. 가격 인상, 수직 통합, 압도적 기술 리드가 동시에 작용한 결과.</div></div>
+<div class="news-card info nb"><div class="news-tag">TSMC · CoWoS</div><div class="news-title">Nvidia, TSMC CoWoS 캐파 60%+ 선점 — 2025·2026 Blackwell·Rubin 공급 확보</div><div class="news-body">엔비디아가 2025·2026년 TSMC 전체 CoWoS 패키징 캐파의 60% 이상을 선제적으로 확보. 모든 Blackwell GPU와 차세대 Rubin이 멀티 GPU 다이를 HBM3E와 연결하기 위해 CoWoS-L 패키징을 필수로 사용.</div></div>
+<div class="news-card highlight nb"><div class="news-tag">TSMC · Capex 2026</div><div class="news-title">TSMC, 2026년 Capex $56B 책정 — 2nm 양산 본격화 &amp; 사전 약정 캐파 확대</div><div class="news-body">TSMC는 2026년 $56B 규모 설비투자를 책정하고 2nm 공정 양산을 본격화. 첨단 패키징 캐파에 대해 고객사들의 다년간 사전 약정 물량이 누적된 상태.</div></div>
+<div class="news-card warning nb"><div class="news-tag">TSMC · Earnings Call</div><div class="news-title">TSMC 실적 발표 임박 — 중동 공급망 위기가 핵심 화두</div><div class="news-body">TSMC 실적 발표에서 중동 공급망 위기와 복잡한 환경에서의 가동 지속 가능성이 핵심 이슈로 부상. 공급망 차질이 AI 인프라 빌드아웃에 미칠 영향이 시장 관심사.</div></div>
+</div></div>
+
+<div class="sec nb"><div class="sec-title"><span class="icon">🔬</span> AI 칩 경쟁 — 신규 플레이어 &amp; 자급화</div><div class="news-grid">
+<div class="news-card tech nb"><div class="news-tag">Google · TPUv7</div><div class="news-title">Google TPUv7 — Anthropic 100만+ TPU 약정, 외부 빅 고객 공식 확인</div><div class="news-body">SemiAnalysis는 Google TPUv7의 외부 대형 고객 중 하나가 Anthropic이며 최소 100만개 이상의 TPU 수요가 있음을 보도. Anthropic의 멀티 가속기 전략(엔비디아 GPU + AWS Trainium + Google TPU) 가속화.</div></div>
+<div class="news-card tech nb"><div class="news-tag">Amazon · Anthropic</div><div class="news-title">AWS·Anthropic, 멀티 기가와트 Trainium 확장 — Amazon AI 부활</div><div class="news-body">SemiAnalysis는 AWS와 Anthropic이 멀티 기가와트 규모의 Trainium 확장에 나서고 있으며, 이는 Amazon AI 인프라 부활의 핵심 동력이라고 분석. 자체 가속기로 비용·캐파 양면에서 엔비디아 의존도 완화 시도.</div></div>
+<div class="news-card warning nb"><div class="news-tag">China · DeepSeek</div><div class="news-title">DeepSeek V4, 화웨이 'Ascend 950PR' 추론칩 최적화 — 엔비디아 의존 탈피</div><div class="news-body">DeepSeek가 차세대 V4 모델을 화웨이 AI 추론용 칩 '어센드 950PR'에 맞춰 최적화해 출시 준비 중. 기존 엔비디아 중심 구조에서 벗어나 화웨이·캠브리콘 등 중국 반도체 기업과의 협력 확대.</div></div>
+</div></div>
+
+<table class="tbl nb"><tr><th>구분</th><th>주체</th><th>내용</th><th>임팩트</th></tr>
+<tr><td>HBM</td><td>삼성전자</td><td>1c D램 개발 성공, Rubin HBM4 공급 발판</td><td>HBM4 점유율 역전 시도</td></tr>
+<tr><td>HBM</td><td>SK하이닉스</td><td>M15X 20조원+ 투자, HBM3E·HBM4 거점화</td><td>HBM 우위 견고</td></tr>
+<tr><td>실적</td><td>삼성+SK</td><td>2026 합산 영업익 370조 시나리오 (키움)</td><td>슈퍼사이클 가시화</td></tr>
+<tr><td>가격</td><td>DRAM·NAND</td><td>분기 50~60% 급등, 모바일 범용까지 확산</td><td>이중 수익성 부스트</td></tr>
+<tr><td>파운드리</td><td>TSMC</td><td>점유율 68%, 2026 Capex $56B, 매출 +30%</td><td>독주 체제 강화</td></tr>
+<tr><td>AI 칩</td><td>Nvidia</td><td>GTC 2026 6개 신칩 공개, CoWoS 60%+ 선점</td><td>전체 AI 인프라 락인</td></tr>
+<tr><td>GPU 캐파</td><td>전 시장</td><td>8~9월 가동분까지 매진, Hopper 가격도 상승</td><td>매도자 시장 장기화</td></tr>
+<tr><td>대안 가속기</td><td>Google TPU·AWS Trainium</td><td>Anthropic 100만+ TPU 약정, AWS GW급 확장</td><td>엔비디아 의존도 완화</td></tr></table>
+</div>
+
+<div class="page page-break">
+<div class="sec"><div class="sec-title"><span class="icon">🇰🇷</span> 한국 AI 반도체 생태계</div><div class="news-grid">
+<div class="news-card info nb"><div class="news-tag">Samsung SDS · NPUaaS</div><div class="news-title">삼성SDS, 클라우드 기반 NPU 서비스 'NPUaaS' 7월 출시 — 국내 CSP 최초</div><div class="news-body">삼성SDS가 클라우드 기반 NPU 서비스(NPUaaS)를 준비, 국내 CSP 중 최초 상용화를 7월 출시 목표로 추진. 국산 AI 가속기 클라우드 공급 모델 본격화.</div></div>
+<div class="news-card info nb"><div class="news-tag">Korea IT · NPU</div><div class="news-title">LG CNS·포스코DX·롯데이노베이트, AI 반도체 스타트업과 산업 적용 확대</div><div class="news-body">LG CNS, 포스코DX, 롯데이노베이트 등 주요 IT 기업들이 AI 반도체 스타트업과 협력해 NPU 기반 서비스와 산업 적용을 확대. 국내 AI 반도체 수요 기반 형성.</div></div>
+<div class="news-card warning nb"><div class="news-tag">Supply Chain</div><div class="news-title">반도체 공급망 '자금 경색' 우려 — 슈퍼사이클 속에서도 중소 협력사 부담</div><div class="news-body">삼성·SK 영업익 370조 슈퍼사이클 전망 속에서도 일부 공급망 협력사들의 자금 경색 이슈가 부각. 캐파 증설 속도와 협력사 운영자금 수급 불일치 리스크.</div></div>
+<div class="news-card info nb"><div class="news-tag">Foundry · Korea</div><div class="news-title">"파운드리 빅2" 격차 확대 — 삼성, 2nm/1.4nm에서 활로 모색</div><div class="news-body">파운드리 시장 점유율 격차가 더 벌어진 가운데 삼성전자는 2nm/1.4nm 첨단 노드 공정에서 차세대 핵심 고객 확보를 통한 활로 모색에 사활.</div></div>
+</div></div>
+
+<div class="insight nb"><div class="insight-title">💡 투자 시사점 (반도체 섹터)</div><div class="insight-body"><b>1. AI 컴퓨팅 슈퍼사이클 — 매도자 시장 장기화:</b> SemiAnalysis 기준 GPU 온디맨드 렌탈 캐파가 모든 타입에서 매진, 시장 전체 캐파가 8~9월까지 부킹 완료. Anthropic 단일월(2월) +$6B ARR이 입증하듯 어젠틱 AI(코딩·에이전트) 워크로드가 추론 수요를 폭발시키는 중. Hopper 가격도 상승세 = 구세대 자산까지 캐시카우화.<br><br><b>2. 한국 메모리 — HBM4 변곡점:</b> 삼성 1c D램 성공 + Rubin HBM4 공급 시도, SK하이닉스 M15X 20조원 캐파 투자가 핵심. 키움증권 합산 370조 시나리오는 컨센서스 대비 공격적이지만, DRAM·NAND 분기 50~60% 가격 급등이 동반된다면 무시 못 할 시나리오.<br><br><b>3. TSMC 독주 강화:</b> 점유율 68%·2026 Capex $56B·매출 +30%·CoWoS 60% Nvidia 락인 — 다년간 사전 약정 캐파가 안전판. 다만 중동 공급망 위기는 단기 리스크로 실적 발표에서 가이던스 톤 주목.<br><br><b>4. AI 가속기 다각화 가속:</b> Google TPUv7 + Anthropic 100만 TPU 약정, AWS Trainium 멀티 기가와트 확장은 엔비디아 일변도에서 멀티 가속기 시대로의 이행 신호. 패키징·HBM·인터커넥트 공급사는 가속기 종류와 무관하게 수혜 구조.<br><br><b>5. 한국 AI 반도체 생태계:</b> 삼성SDS NPUaaS 7월 상용화, 국내 IT 기업들의 NPU 채택 확산은 국산 AI 반도체 스타트업(리벨리온·퓨리오사AI 등)의 매출 가시화 변곡점.<br><br><b>6. 리스크 — 중국 자급화 가속:</b> DeepSeek V4의 화웨이 Ascend 950PR 최적화는 중국 시장에서 엔비디아 점유율 잠식 가능성 시사. 중장기 글로벌 메모리·파운드리 공급 과잉 시나리오 모니터링 필요.</div></div>
+
+<table class="tbl nb"><tr><th>구분</th><th>관련 종목 (참고)</th><th>포인트</th></tr>
+<tr><td>HBM·D램</td><td>SK하이닉스, 삼성전자, 마이크론</td><td>HBM4 + 분기 50~60% 가격 급등</td></tr>
+<tr><td>EUV·노광</td><td>ASML</td><td>M15X·삼성 P5 대규모 발주 수혜</td></tr>
+<tr><td>국내 장비·소재</td><td>한미반도체, 원익IPS, 솔브레인, 동진쎄미켐</td><td>HBM·캐파 증설 직접 수혜</td></tr>
+<tr><td>AI 가속기</td><td>Nvidia, AMD, Broadcom</td><td>Vera Rubin, Inference 시장 확장</td></tr>
+<tr><td>파운드리</td><td>TSMC, 삼성전자</td><td>2nm/1.4nm 노드 + CoWoS 패키징</td></tr>
+<tr><td>대안 가속기</td><td>Google, AWS, Anthropic</td><td>TPUv7 100만+, Trainium GW급 확장</td></tr>
+<tr><td>국내 AI칩</td><td>리벨리온, 퓨리오사AI, 사피온</td><td>NPUaaS·국내 IT 도입 확대</td></tr>
+<tr><td>중국 반도체</td><td>SMIC, Cambricon, Huawei (HiSilicon)</td><td>DeepSeek V4 Ascend 950PR 최적화</td></tr></table>
+
+<div class="ftr">⚠️ 본 브리핑은 자동 생성 콘텐츠이며, 투자 권유가 아닙니다.<br>Source: SemiAnalysis (newsletter.semianalysis.com), Tom's Hardware, DigiTimes, Taipei Times, SK hynix Newsroom, Business Post, 글로벌이코노믹, CEOSCOREDAILY, sptatimeskorea<br>Generated: 2026-04-08 KST</div>
+</div>
+</body>
+</html>

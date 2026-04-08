@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>해운 섹터 데일리 브리핑 | 2026.04.08</title>
+<style>
+@page{size:A4 portrait;margin:10mm 12mm}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
+:root{--navy:#0f172a;--navy2:#1e293b;--navy3:#334155;--red:#dc2626;--red-bg:#fef2f2;--red-light:#fee2e2;--blue:#1e40af;--blue-bg:#eff6ff;--blue-light:#dbeafe;--green:#16a34a;--green-bg:#f0fdf4;--green-light:#dcfce7;--amber:#d97706;--amber-bg:#fffbeb;--amber-light:#fef3c7;--slate:#334155;--slate2:#64748b;--slate3:#94a3b8;--slate4:#cbd5e1;--slate5:#e2e8f0;--slate6:#f1f5f9;--white:#fff;--ink:#0f172a}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+body{font-family:'Noto Sans KR',-apple-system,sans-serif;color:var(--ink);background:var(--white);font-size:9pt;line-height:1.55}
+.page{width:186mm;max-width:186mm;margin:0 auto}
+.page-break{page-break-before:always}
+.nb{page-break-inside:avoid;break-inside:avoid}
+@media screen{body{background:#dde3ea;padding:24px 0}.page{background:#fff;padding:10mm 12mm;box-shadow:0 4px 20px rgba(0,0,0,.12);border-radius:6px;margin-bottom:20px}}
+.hdr{background:linear-gradient(135deg,#0c1929,#172554 50%,#1e3a5f)!important;border-radius:8px;padding:14px 18px;margin-bottom:14px;display:flex;justify-content:space-between;align-items:center;color:#fff}
+.hdr h1{font-size:15pt;font-weight:900;letter-spacing:-.8px}
+.hdr .sub{font-size:7.5pt;color:#94a3b8;margin-top:2px}
+.hdr .dt{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);padding:5px 14px;border-radius:20px;font-size:8pt;font-weight:700}
+.hero{border-radius:8px;padding:14px 16px;margin-bottom:14px;display:flex;align-items:flex-start;gap:12px}
+.hero.alert{background:linear-gradient(135deg,#fef2f2,#fff1f2)!important;border:1.5px solid #fca5a5}
+.hero.positive{background:linear-gradient(135deg,#eff6ff,#dbeafe)!important;border:1.5px solid #93c5fd}
+.hero-icon{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.hero.alert .hero-icon{background:var(--red);color:#fff}
+.hero.positive .hero-icon{background:var(--blue);color:#fff}
+.hero-text{font-size:8.5pt;line-height:1.65}
+.hero.alert .hero-text{color:#991b1b}
+.hero.positive .hero-text{color:#1e3a5f}
+.hero-text b{font-weight:900}
+.sec{margin-bottom:14px}
+.sec-title{font-size:10.5pt;font-weight:900;color:var(--navy);padding-bottom:6px;border-bottom:2px solid var(--navy);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.sec-title .icon{font-size:14px}
+.news-grid{display:grid;grid-template-columns:1fr;gap:8px}
+.news-card{background:var(--slate6);border:1px solid var(--slate5);border-radius:8px;padding:12px 14px}
+.news-card.highlight{border-left:3px solid var(--red);background:var(--red-bg)}
+.news-card.info{border-left:3px solid var(--blue);background:var(--blue-bg)}
+.news-card.deal{border-left:3px solid var(--green);background:var(--green-bg)}
+.news-card.warning{border-left:3px solid var(--amber);background:var(--amber-bg)}
+.news-tag{font-size:6.5pt;font-weight:800;text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px}
+.news-card.highlight .news-tag{color:var(--red)}
+.news-card.info .news-tag{color:var(--blue)}
+.news-card.deal .news-tag{color:var(--green)}
+.news-card.warning .news-tag{color:var(--amber)}
+.news-title{font-size:9.5pt;font-weight:800;color:var(--navy);margin-bottom:4px}
+.news-body{font-size:8pt;color:var(--slate);line-height:1.6}
+.kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px}
+.kpi{text-align:center;padding:10px 6px;border-radius:8px;border:1px solid var(--slate5)}
+.kpi.up{background:var(--red-bg);border-color:var(--red-light)}
+.kpi.dn{background:var(--blue-bg);border-color:var(--blue-light)}
+.kpi.neu{background:var(--slate6)}
+.kpi-lb{font-size:6.5pt;font-weight:700;color:var(--slate3);text-transform:uppercase;letter-spacing:.5px}
+.kpi-v{font-size:12pt;font-weight:900;margin-top:3px}
+.kpi.up .kpi-v{color:var(--red)}
+.kpi.dn .kpi-v{color:var(--blue)}
+.insight{background:linear-gradient(135deg,#f8fafc,#f1f5f9);border:1px solid var(--slate5);border-radius:8px;padding:14px 16px;margin-bottom:14px}
+.insight-title{font-size:9pt;font-weight:800;color:var(--navy);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.insight-body{font-size:8pt;color:var(--slate);line-height:1.7}
+.tbl{width:100%;border-collapse:collapse;font-size:7.5pt;margin-bottom:14px}
+.tbl th{background:var(--navy)!important;color:#fff;font-weight:700;padding:7px 10px;text-align:left;font-size:7pt;text-transform:uppercase;letter-spacing:.5px}
+.tbl td{padding:7px 10px;border-bottom:1px solid var(--slate5)}
+.tbl tr:nth-child(even) td{background:var(--slate6)!important}
+.back-btn{display:inline-block;margin-bottom:14px;padding:6px 14px;background:var(--slate6);border:1px solid var(--slate5);border-radius:6px;text-decoration:none;color:var(--slate);font-size:8pt;font-weight:600}
+.ftr{margin-top:16px;padding-top:12px;border-top:1px solid var(--slate5);font-size:7pt;color:var(--slate3);text-align:center;line-height:1.6}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:600px){.two-col{grid-template-columns:1fr}.kpi-row{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<div class="page">
+<a href="../index.html" class="back-btn">← 브리핑 목록</a>
+<div class="hdr"><div><h1>Global Shipping Daily Briefing</h1><div class="sub">해운·해양 섹터 데일리 뉴스 브리핑</div></div><div class="dt">2026.04.08 (수)</div></div>
+
+<div class="hero alert"><div class="hero-icon">⚠️</div><div class="hero-text"><b>중동 해상 위기 — VLCC 운임 사상 최고 $42만/일, 호르무즈 통항 -92%, 컨테이너는 희망봉 우회 + 운임 +20~50%.</b> Kpler·Lloyd's List·CNBC 보도에 따르면 VLCC 벤치마크 일일 운임이 3월 초 사상 최고치 $423,736/일을 찍으며 직전주 대비 +94%, 호르무즈 해협 탱커 통항은 분쟁 직전 대비 -92% 붕괴. QatarEnergy는 라스 라판 시설 드론 피격 후 LNG 생산을 중단했고, Atlantic Basin LNG 운임은 며칠 만에 +163%. 머스크·하파그로이드·CMA CGM은 다시 희망봉 우회를 단행해 운임을 +20~50% 상향. 한편 한국 조선 빅3는 1Q에만 합산 약 $115억 수주를 채우며 슈퍼사이클 행진 지속.</div></div>
+
+<div class="kpi-row">
+<div class="kpi up"><div class="kpi-lb">VLCC 일일 운임 (3월 피크)</div><div class="kpi-v">$424k</div></div>
+<div class="kpi up"><div class="kpi-lb">LNG 운임 (Atlantic)</div><div class="kpi-v">+163%</div></div>
+<div class="kpi dn"><div class="kpi-lb">Hormuz 탱커 통항</div><div class="kpi-v">-92%</div></div>
+<div class="kpi up"><div class="kpi-lb">Cape 우회 운임 가산</div><div class="kpi-v">+20~50%</div></div>
+</div>
+
+<div class="sec"><div class="sec-title"><span class="icon">🔥</span> 호르무즈·중동 위기 — 핵심 동향</div><div class="news-grid">
+<div class="news-card highlight nb"><div class="news-tag">CNBC · VLCC</div><div class="news-title">VLCC 운임 사상 최고치 — 보험사들 중동 전쟁 보장 잇따라 철회</div><div class="news-body">CNBC는 주요 해상 전쟁위험(war risk) 보험사들이 페르시아만 운항 선박에 대한 보장을 잇따라 해지하면서 VLCC 운임이 사상 최고치까지 폭등했다고 보도. 통항 자체의 법적·물리적 가능성이 위협받는 국면.</div></div>
+<div class="news-card highlight nb"><div class="news-tag">Kpler · Hormuz</div><div class="news-title">Kpler "호르무즈 셧다운으로 VLCC 운임 폭등" — 분쟁 전 대비 통항 -92%</div><div class="news-body">Kpler에 따르면 호르무즈 해협 셧다운 영향으로 VLCC 스폿 운임이 직전주 대비 +94% 폭등하고, 해협을 통한 탱커 통항은 분쟁 직전 주 대비 약 92% 붕괴. Lloyd's List는 탱커 임원들이 스폿 운임 두 배 시나리오를 공식 논의 중이라고 전함.</div></div>
+<div class="news-card warning nb"><div class="news-tag">Qatar · LNG</div><div class="news-title">QatarEnergy, 라스 라판 시설 이란 드론 피격 후 LNG 생산 전면 중단</div><div class="news-body">이란 드론이 카타르 라스 라판 LNG 생산 시설을 공격해 안전 우려가 커지자 QatarEnergy가 LNG 생산을 전면 중단. Atlantic Basin LNG 운반선 운임이 며칠 만에 +163% 폭등.</div></div>
+<div class="news-card highlight nb"><div class="news-tag">Argus · Americas VLCC</div><div class="news-title">Americas 항로 VLCC 운임, 6년 최고 상회 — 중동 우회 수요 증가</div><div class="news-body">Argus Media는 중동 위기에 따른 우회 화물 증가로 미국·중남미 출발 VLCC 운임이 6년 만의 최고 수준을 상회 중이라고 보도. 톤마일 거리 증가가 운임 강세의 구조적 동력.</div></div>
+</div></div>
+
+<div class="sec nb"><div class="sec-title"><span class="icon">📦</span> 컨테이너 — 희망봉 우회 &amp; 운임 인상</div><div class="news-grid">
+<div class="news-card info nb"><div class="news-tag">Maersk · Operations</div><div class="news-title">Maersk 중동 항만 가동 31일 재개 — 오만 당국 추가 보안 조치</div><div class="news-body">머스크는 중동 일부 항만 가동을 3월 31일 재개했으며, 오만 당국이 항만에 추가 예방적 보안 조치를 도입했다고 발표. 4월 6일부터는 비선호 회수지에 대한 PIC(Pickup Charge Export) 부과 시작.</div></div>
+<div class="news-card warning nb"><div class="news-tag">Maersk · Cape Reroute</div><div class="news-title">머스크·하파그로이드·CMA CGM, 희망봉 재우회 — 운임 +20~50%, 운송기간 +1~2주</div><div class="news-body">머스크·하파그로이드·CMA CGM이 다시 희망봉으로 우회 운항을 단행하면서 운송 기간이 1~2주 늘고 운임은 20~50% 가산. 비상 분쟁 할증료(ECS), 전쟁위험 프리미엄, 비상 연료 할증료 등 누적 추가 부담 지속.</div></div>
+<div class="news-card warning nb"><div class="news-tag">India-Europe · GRI</div><div class="news-title">MSC·머스크·CMA CGM, 인도→유럽 운임 컨테이너당 최대 $1,000 인상</div><div class="news-body">인도→유럽 항로에서 MSC, 머스크, CMA CGM이 컨테이너당 최대 $1,000 인상을 단행. MSC는 인도/파키스탄 → 안트워프·발렌시아 항로에 컨테이너당 $1,000을 추가해 전체 운임을 $3,550까지 끌어올림.</div></div>
+<div class="news-card info nb"><div class="news-tag">CMA CGM · Hormuz</div><div class="news-title">CMA CGM, 호르무즈 통과 단행 — "위기는 국지화" 평가</div><div class="news-body">CMA CGM 소속 선박 한 척이 호르무즈 해협을 통과하며 동사가 위기를 "국지화된(localized)" 사안으로 평가. 컨테이너선 부문은 다른 항로보다 통항 재개 의지를 일부 표출.</div></div>
+</div></div>
+</div>
+
+<div class="page page-break">
+<div class="sec"><div class="sec-title"><span class="icon">🇰🇷</span> 한국 조선 — 빅3 1Q 누적 ~$115억 수주</div><div class="two-col">
+<div class="news-card deal nb"><div class="news-tag">HD Hyundai · Q1</div><div class="news-title">HD한국조선해양, 1Q 수주 $59.4억 — 연 목표 25%+ 조기 달성</div><div class="news-body">HD한국조선해양이 1분기 누적 59억4000만달러를 수주하며 연간 목표의 25% 이상을 조기 달성. LPG·PC선 등 1조2000억원 규모 계약을 따내며 수주 행진 지속.</div></div>
+<div class="news-card deal nb"><div class="news-tag">Samsung Heavy · VLGC</div><div class="news-title">삼성중공업, 4월 초 친환경 VLGC 2척 추가 — 1Q $31억 (목표 22.3%)</div><div class="news-body">삼성중공업이 4월 초 친환경 대형가스운반선(VLGC) 2척을 추가 수주하며 연간 목표의 20% 이상을 조기 달성. 1분기 누적 수주는 31억달러로 목표의 22.3% 채움.</div></div>
+<div class="news-card deal nb"><div class="news-tag">Hanwha Ocean · Q1</div><div class="news-title">한화오션, 1Q 누적 수주 $24.3억 — 4월 브랜드평판 1위</div><div class="news-body">한화오션이 1분기 누적 24억3000만달러 수주로 안정적 흐름을 이어감. 2026년 4월 조선 상장기업 브랜드평판 1위에 한화오션, 2위 HD현대중공업, 3위 삼성중공업 순으로 분석.</div></div>
+<div class="news-card info nb"><div class="news-tag">Korea · 2026 Outlook</div><div class="news-title">"2026 한국 조선 신규 수주 약 $388억" — 전년比 +10%, LNG선이 핵심</div><div class="news-body">2026년 국내 조선사 신규 수주는 약 388억달러로 전년 대비 10% 증가가 예상되며, LNG선과 유조선이 수주를 견인할 핵심 선종으로 꼽힘. 1Q 빅3 누적만 약 $115억으로 연간 페이스의 30% 근접.</div></div>
+</div></div>
+
+<div class="sec"><div class="sec-title"><span class="icon">🏗️</span> 신조 발주 &amp; S&amp;P</div><div class="news-grid">
+<div class="news-card deal nb"><div class="news-tag">CSSC · VLCC</div><div class="news-title">중국 CSSC, $1.3B 규모 VLCC 10척 수주 확정</div><div class="news-body">중국 조선 그룹 CSSC가 $1.3B 규모의 VLCC 10척 수주를 확정. 중동 위기에 따른 톤마일 확장과 VLCC 운임 사상 최고 환경에서 신조 사이클 가속.</div></div>
+<div class="news-card info nb"><div class="news-tag">Aramco · Tankers</div><div class="news-title">Saudi Aramco, 운임 안정화 국면에서 탱커 신조 인수 진행</div><div class="news-body">사우디 아람코가 운임이 일부 안정화되는 국면에서 신조 탱커들을 인수받아 자체 선대를 강화 중. 국영 화주의 직영 선대 비중 확대 전략.</div></div>
+</div></div>
+</div>
+
+<div class="page page-break">
+<div class="sec"><div class="sec-title"><span class="icon">🇪🇺</span> 유럽 항로 &amp; 운영 이슈</div><div class="news-grid">
+<div class="news-card warning nb"><div class="news-tag">Spain · Rail</div><div class="news-title">스페인 ADIF Rubi 터널 폐쇄 — Maersk, Barcelona-Toulouse·Lyon 서비스 중단</div><div class="news-body">스페인 철도 인프라 관리사 ADIF가 3월 14일부터 5~7주간 Rubi 터널을 폐쇄하면서 머스크가 Barcelona-Toulouse 및 Barcelona-Lyon 양방향 서비스를 일시 중단. 남유럽 인터모달 흐름에 차질.</div></div>
+<div class="news-card info nb"><div class="news-tag">Asia-Oceania · GRI</div><div class="news-title">ANL(CMA CGM)·MSC, 4월 1일부 아시아→호주/뉴질랜드 운임 회복</div><div class="news-body">ANL(CMA CGM 그룹)이 4월 1일부 아시아·인도아대륙·중동 → 호주/뉴질랜드 항로에 대해 20피트당 $300 / 40피트당 $600의 운임 회복 적용. MSC는 북·동남아 → 호주/뉴질랜드 노선에 TEU당 $300 회복 시행.</div></div>
+<div class="news-card warning nb"><div class="news-tag">Aviation · Fuel</div><div class="news-title">중동 사태로 항공유 시장 변동성 확대 — Maersk Air FSC 주간 단위 재검토</div><div class="news-body">중동 사태로 글로벌 항공유 시장 변동성이 커지면서 항공 물류 차질이 발생, 머스크는 항공 연료 할증료(FSC)를 주간 단위로 재검토·인상하기로 결정.</div></div>
+</div></div>
+
+<table class="tbl nb"><tr><th>구분</th><th>주체/항로</th><th>내용</th><th>임팩트</th></tr>
+<tr><td>탱커</td><td>VLCC 벤치마크</td><td>일일 운임 $423,736 사상 최고 (+94% WoW)</td><td>유조선 슈퍼사이클</td></tr>
+<tr><td>탱커</td><td>Argus · Americas</td><td>VLCC 운임 6년 최고치 상회</td><td>톤마일 확장 수혜</td></tr>
+<tr><td>LNG</td><td>Atlantic Basin</td><td>LNG 운임 며칠 만에 +163%</td><td>가스선 운임 폭등</td></tr>
+<tr><td>LNG</td><td>QatarEnergy</td><td>라스 라판 드론 피격 후 LNG 생산 중단</td><td>공급 불확실성</td></tr>
+<tr><td>호르무즈</td><td>전체 탱커</td><td>통항 -92% vs 분쟁 전</td><td>가용 캐파 급감</td></tr>
+<tr><td>컨테이너</td><td>Maersk·Hapag·CMA CGM</td><td>희망봉 재우회 → 운임 +20~50%</td><td>FAK·할증료 인상</td></tr>
+<tr><td>컨테이너</td><td>인도→유럽</td><td>MSC/머스크/CMA CGM 컨당 +$1,000</td><td>아시아 수출 채산성 압박</td></tr>
+<tr><td>한국 조선</td><td>빅3 1Q</td><td>합산 ~$115억 (HD 59.4 + 삼성 31 + 한화 24.3)</td><td>슈퍼사이클 견고</td></tr>
+<tr><td>신조</td><td>CSSC</td><td>VLCC 10척 $1.3B 발주 확정</td><td>중국 야드 점유 확대</td></tr></table>
+</div>
+
+<div class="page page-break">
+<div class="insight nb"><div class="insight-title">💡 투자 시사점 (해운 섹터)</div><div class="insight-body"><b>1. 유조선 — 사상 최고 운임 사이클:</b> VLCC 일일 운임이 3월 초 $423,736으로 사상 최고치를 찍은 가운데 호르무즈 통항이 -92% 붕괴 = 가용 톤·톤마일 동시 압박. 보험사 war risk 보장 철회까지 더해지며 단기 운임은 추가 상방 여력. Frontline·DHT·Euronav 등 정유사 직속 화주가 아닌 시장 노출 큰 운영사 수혜 폭이 큼.<br><br><b>2. LNG — 변동성 폭발:</b> Atlantic Basin 운임 +163%, QatarEnergy 라스 라판 생산 중단은 단기 가스선 운임을 끌어올리지만, 카타르 공급 차질이 길어지면 유럽 수요처가 미국·호주산 LNG로 이전 → 톤마일 추가 확장. Flex LNG·Cool Company 변동성 거래 기회.<br><br><b>3. 컨테이너 — 희망봉 재우회 + GRI 누적:</b> 머스크·하파그로이드·CMA CGM 희망봉 우회로 운임 +20~50%, 인도→유럽 컨당 +$1,000 인상은 단기 운임 강세 재현을 시사. 다만 추가 리세션·재고 사이클 약화 시 수요 급랭 리스크. HMM·Maersk·ZIM 단기 트레이딩.<br><br><b>4. 한국 조선 — 슈퍼사이클 가시화:</b> 빅3 1Q 합산 ~$115억 수주, 2026 연 388억 전망(+10% YoY), LNG·VLCC·VLGC가 동력. CSSC VLCC 10척 발주 처럼 글로벌 경쟁사 발주도 동반되지만 한국 빅3는 LNG·암모니아·메탄올 친환경 선종에서 우위 유지.<br><br><b>5. 인프라·운영 리스크:</b> 스페인 Rubi 터널 폐쇄 같은 인터모달 차질, 항공 FSC 주간 인상 등 마진 압박 요인 누적. Maersk PIC 신설은 운영비 회수 의지의 신호.</div></div>
+
+<table class="tbl nb"><tr><th>구분</th><th>관련 종목 (참고)</th><th>포인트</th></tr>
+<tr><td>한국 조선</td><td>HD한국조선해양, 한화오션, 삼성중공업</td><td>빅3 1Q ~$115억, LNG·VLCC·VLGC 우위</td></tr>
+<tr><td>VLCC</td><td>Frontline, DHT Holdings, Euronav, International Seaways</td><td>운임 사상 최고 + 톤마일 확장</td></tr>
+<tr><td>벌크선</td><td>Star Bulk, Golden Ocean, Pan Ocean</td><td>호르무즈 우회 화물 흐름 변화</td></tr>
+<tr><td>LNG</td><td>Flex LNG, Cool Company, Excelerate</td><td>Atlantic 운임 +163% 변동성</td></tr>
+<tr><td>컨테이너</td><td>HMM, Maersk, ZIM, Hapag-Lloyd, COSCO</td><td>희망봉 우회 + GRI 누적 단기 강세</td></tr>
+<tr><td>중국 조선</td><td>CSSC, China State Shipbuilding</td><td>VLCC 10척 $1.3B 수주, 글로벌 점유 확대</td></tr>
+<tr><td>해상 보험</td><td>Lloyd's 시장, Beazley, Hiscox</td><td>war risk 보장 철회·재가입 사이클</td></tr></table>
+
+<div class="ftr">⚠️ 본 브리핑은 자동 생성 콘텐츠이며, 투자 권유가 아닙니다.<br>Source: TradeWinds, Kpler, Lloyd's List, CNBC, Argus Media, Maersk News, FreightWaves, Maritime Gateway, 이지경제, 에너지신문, 중앙이코노미뉴스, 파이낸셜뉴스<br>Generated: 2026-04-08 KST</div>
+</div>
+</body>
+</html>

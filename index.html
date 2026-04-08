@@ -52,8 +52,10 @@ const SECTORS = {
   semi:     { icon: "💾", name: "반도체", color: "#4338ca" }
 };
 const b = [
-  { sector: "semi",     d: "2026-04-07", label: "2026년 4월 7일 (화)", sub: "AI 실리콘 대란 — H100 1Y 임대료 +40% / SK하이닉스 EUV M15X 전진 배치 / 삼성전자 SoCAMM2 기술 해결 — 엔비디아 공급 / TSMC vs 삼성 파운드리 점유율 38% vs 4%", n: true },
-  { sector: "shipping", d: "2026-04-07", label: "2026년 4월 7일 (화)", sub: "호르무즈 해협 통항 재개 시작 — 중국 벌크선 선도 통과 / 트럼프, 이란 인프라 파괴 시한 언급 / HD현대, Byzantine Maritime LPG선 수주 / 우크라이나 드론 러시아 벌크선 격침", n: true }
+  { sector: "semi",     d: "2026-04-08", label: "2026년 4월 8일 (수)", sub: "GPU 렌탈 캐파 전면 매진 — Blackwell 6~7월 / 삼성 1c D램 성공 — Rubin HBM4 / TSMC 점유율 68% · 2026 Capex $56B / 키움 \"삼성+SK 영업익 370조\" 시나리오", n: true },
+  { sector: "shipping", d: "2026-04-08", label: "2026년 4월 8일 (수)", sub: "VLCC 운임 사상 최고 $42만/일 / 호르무즈 통항 -92% / Atlantic LNG +163% / 머스크·하파그·CMA CGM 희망봉 우회 / 한국 조선 빅3 1Q $115억", n: true },
+  { sector: "semi",     d: "2026-04-07", label: "2026년 4월 7일 (화)", sub: "AI 실리콘 대란 — H100 1Y 임대료 +40% / SK하이닉스 EUV M15X 전진 배치 / 삼성전자 SoCAMM2 기술 해결 — 엔비디아 공급 / TSMC vs 삼성 파운드리 점유율 38% vs 4%", n: false },
+  { sector: "shipping", d: "2026-04-07", label: "2026년 4월 7일 (화)", sub: "호르무즈 해협 통항 재개 시작 — 중국 벌크선 선도 통과 / 트럼프, 이란 인프라 파괴 시한 언급 / HD현대, Byzantine Maritime LPG선 수주 / 우크라이나 드론 러시아 벌크선 격침", n: false }
 ];
 const list = document.getElementById('briefing-list');
 const tabs = document.querySelectorAll('.sector-tab');
